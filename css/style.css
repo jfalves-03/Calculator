@@ -1,0 +1,90 @@
+/************RESET*************/
+*, *::after, *::before {
+    margin: 0;
+    padding: 0; 
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+/******************************/
+
+/*************BODY*************/
+body{
+    background: linear-gradient(to right, rgb(245, 54, 54), rgb(241, 241, 50));
+    min-height: 100vh;
+}
+
+    /**********HEADER********/
+    h1{
+        text-align: center;
+    }
+    /************************/
+
+    /**********MAIN**********/
+
+        /*********CALCULATOR-WRAPPER*********/
+        .calculator-container{
+            display: grid;
+            align-content: center;
+            justify-content: center;
+
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+            min-height: 100vh;
+        }
+
+            /**********SCREEN***********/
+            .screen{
+                grid-column: 1 / -1;
+                background-color: rgba(0, 0, 0, 0.6);
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+
+                padding: 1rem;
+            }
+
+                /******PREVIOUS OPERAND SCREEN*******/
+                    .previous-operand{
+                        color: gray;
+                        font-size: 1.5rem;
+                    }
+                /************************************/
+
+                /*******CURRENT OPERAND SCREEN*******/
+                    .current-operand{
+                        color: white;
+                        font-size: 2.5rem;
+                    }
+                /************************************/
+            /***************************/
+
+            /******CALCULATOR BUTTON******/
+            .calculator-container > button{
+                border: white solid;
+
+                font-size: 2rem;
+
+                cursor: pointer;
+                
+                background-color: rgba(255, 255, 255, 0.6);
+            }
+
+            .calculator-container > button:hover{
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+            /****************************/
+
+            /*****BUTTONS TWO COLUMNS****/
+            .button-column{
+                grid-column: span 2;
+            }
+            /****************************/
+
+        /************************************/
+    /************************/
+/******************************/
